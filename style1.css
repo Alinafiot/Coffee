@@ -1,0 +1,715 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Хедер */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 1000;
+  background-color: rgba(25, 23, 23, 0.26);
+  backdrop-filter: blur(5px);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px 20px 20px;
+}
+
+.header-top .logo img {
+  height: 70px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+  align-items: center;
+}
+
+/* навігація */
+.header-bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 80px;
+}
+
+.menu {
+  font-size: 25px;
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 25px; 
+  padding: 10px 15px; 
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+
+.menu a:hover {
+  background-color: #a05a2c;
+  color: white;
+  transform: translateY(-2px); 
+}
+
+
+.burger {
+  position: fixed; 
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Основний банер на головній */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center; 
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: left;
+  margin-left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero h6 {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 100px;
+  line-height: 1.2;
+}
+
+.hero .btn {
+  padding: 30px 60px;
+  font-size: 30px;
+  border-radius: 35px;
+  background: #a05a2c;
+  color: white;
+  border: none;
+  cursor: pointer;
+   transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #fff;  
+    color: #a05a2c;         
+    transform: scale(1.1);    
+}
+
+/* Розділ з відео */
+
+.video-section {
+  height: 100vh;
+  padding: 10%;
+  background-color: #c49a6c;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.video-box {
+  position: relative;
+  height: 700px;
+  border-radius: 10px;
+}
+
+.video-overlay {
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.play-btn {
+  position: absolute;
+  width: 70px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-text {
+  padding: 5%;
+  font-size: 36px;
+}
+
+.video-text h1 {
+  font-size: 65px;
+}
+
+.video-text h6 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #a05a2c;
+}
+
+.highlight {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+/* Розділ меню */
+.menu-section {
+  padding: 7%;
+  background: #c49a6c;
+  color: #333;
+  text-align: center;
+}
+
+.menu-section h1 {
+  color: #2c1e15;
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.menu-section p {
+  font-size: 25px;
+  margin-bottom: 60px;
+  color: #666;
+}
+
+/* картки в меню */
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 65px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 35px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.616);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 30px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* галерея*/
+
+.gallery {
+  padding: 100px 0;
+  background: #fff;
+  color: #333;
+  text-align: center;
+}
+
+.gallery h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  color: #2c1e15;
+}
+
+.gallery p {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  gap: 30px;                 
+}
+
+.gallery-grid img {
+  width: 420px;              
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .gallery-grid img {
+    width: 90%;
+    height: 250px;
+  }
+}
+
+
+/* Відгуки */
+.review-section {
+  min-height: 100vh;
+  padding: 90px 20px;
+  background: #c49a6c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.review-section h1 {
+  font-size: 60px;
+
+}
+
+.review-section p {
+  font-size: 30px;
+  margin-bottom: 100px;
+  
+}
+
+
+.review-grid {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.1);
+  padding: 35px;
+  border-radius: 20px;
+  width: 1000px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.review-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.stats-number, 
+.stats-text {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    width: 100%;
+}
+
+.stats-number h2 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.stats-text p {
+    margin: 0;
+    font-size: 30px;
+}
+
+
+/* блог */
+.blog-section {
+    min-height: 100vh;
+    padding: 150px 0;
+    background: #f8f4f0;
+    color: #333;
+    text-align: center;
+}
+
+.blog-section h1 {
+    margin-top: 50px;
+  font-size: 60px;
+
+}
+
+.blog-section p {
+  font-size: 30px;
+  margin-bottom: 100px;
+  
+}
+
+.blog-two-blocks {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.blog-block {
+    width: 45%;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: .3s;
+}
+
+.blog-block:hover {
+    transform: translateY(-5px);
+}
+
+.blog-block img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.blog-block .text {
+    padding: 25px;
+    text-align: left;
+}
+
+.blog-block h4 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.blog-block p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blog-block span {
+    color: #999;
+    font-size: 14px;
+}
+
+/* Підвал сайту */
+.footer {
+  position: relative;
+  color: #fff;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  overflow: hidden;
+  font-size: 2.5rem;
+}
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+
+  /*HEADER */
+  .header-top {
+      display: none;
+  }
+
+  .header {
+      background: rgba(0,0,0,0.75);   
+  }
+
+  .burger {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 36px;
+      color: #493a23;
+      cursor: pointer;
+      z-index: 10001;
+  }
+
+  .header-bottom {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 260px;
+      height: 100vh;
+      background: rgba(0,0,0,0.95);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 10000;
+      padding-top: 60px;
+      display: flex;
+      
+  }
+
+  .header-bottom.active {
+      transform: translateX(0);
+  }
+
+  .menu {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      font-size: 24px;
+  }
+
+  .menu a {
+      color: white;
+      text-decoration: none;
+  }
+
+  /* головна */
+  .hero-content {
+      margin-left: 5%;
+      text-align: left;
+  }
+
+  .hero h1 {
+      font-size: 45px;
+      line-height: 1.2;
+  }
+
+  .hero h6 {
+      font-size: 20px;
+  }
+
+  .hero .btn {
+      font-size: 20px;
+      padding: 15px 30px;
+  }
+
+  /* відео секція*/
+  .video-section {
+      padding: 15% 5%;
+  }
+
+  .video-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      text-align: center;
+  }
+
+  .video-box {
+      height: 300px;
+  }
+
+  .video-text h1 {
+      font-size: 20px;
+  }
+
+  .video-text h6 {
+      font-size: 15px;
+  }
+
+  .video-text p {
+      font-size: 10px;
+  }
+
+  /* меню */
+
+  .menu-section h1 {
+      font-size: 40px;
+  }
+
+  .menu-section p {
+      font-size: 20px;
+  }
+
+  .coffee-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+  }
+
+  .card h4 {
+      font-size: 28px;
+  }
+
+  .card p {
+      font-size: 20px;
+  }
+
+  /*галерея */
+  .gallery-grid img {
+      width: 90%;
+      height: 230px;
+  }
+
+  .gallery h1 {
+      font-size: 35px;
+  }
+
+  .gallery p {
+      font-size: 18px;
+  }
+
+
+  /* відгуки*/
+  .review-section h1 {
+      font-size: 45px;
+  }
+
+  .review-section p {
+      font-size: 22px;
+  }
+
+  .review-grid {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .review-card {
+      width: 100%;
+      padding: 25px;
+  }
+
+  .review-card img {
+      width: 80px;
+      height: 80px;
+  }
+
+    .stats-number h2 {
+        font-size: 30px;
+    }
+
+    .stats-text p {
+        font-size: 16px; 
+    }
+
+    .stats-number,
+    .stats-text {
+        gap: 10px; 
+    }
+
+  /* блог */
+  
+  .blog-section {
+      padding: 20px;
+  } 
+  .blog-two-blocks {
+      flex-direction: column;
+      gap: 40px;
+  }
+
+  .blog-block {
+      width: 100%;
+  }
+
+  .blog-block img {
+      height: 350px;
+  }
+
+  .blog-section h1 {
+      font-size: 45px;
+  }
+
+  .blog-section p {
+      font-size: 22px;
+  }
+
+  /* футер */
+ .footer {
+        padding: 40px 20px;     
+        font-size: 1rem;         
+        text-align: center;
+    }
+
+  .footer-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 0 10px;       
+        position: relative;
+        z-index: 1;              
+        width: 100%;
+    }
+     .footer-about h3 {
+        font-size: 24px;
+        
+    }
+
+    .footer-about p {
+        font-size: 14px;
+        line-height: 1.6;
+        
+    }
+
+}
+
