@@ -101,7 +101,7 @@ body {
   position: relative;
   z-index: 1;
   color: white;
-  text-align: left;
+  text-align: center;
   margin-left: 10%;
   top: 50%;
   transform: translateY(-50%);
